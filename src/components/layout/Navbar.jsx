@@ -27,14 +27,14 @@ const Navbar = () => {
     return (
         <nav className={cn(
             "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-            scrolled || isOpen ? "bg-bg-dark/80 backdrop-blur-md border-white/10" : "bg-transparent"
+            scrolled || isOpen ? "bg-white/80 backdrop-blur-md border-slate-200 shadow-sm" : "bg-transparent"
         )}>
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2">
                         <img src={logo} alt="CoreAIx Labs" className="h-14 w-auto" />
-                        <span className="text-xl font-bold tracking-tight text-white">
+                        <span className="text-xl font-bold tracking-tight text-text-main">
                             CoreAIx <span className="text-primary">Labs</span>
                         </span>
                     </Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
                                 to={link.path}
                                 className={cn(
                                     "text-sm font-medium transition-colors hover:text-primary",
-                                    location.pathname === link.path ? "text-primary" : "text-gray-300"
+                                    location.pathname === link.path ? "text-primary" : "text-text-dim hover:text-text-main"
                                 )}
                             >
                                 {link.name}
@@ -64,7 +64,7 @@ const Navbar = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden text-white"
+                        className="md:hidden text-text-main"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -74,13 +74,13 @@ const Navbar = () => {
 
             {/* Mobile Nav */}
             {isOpen && (
-                <div className="md:hidden bg-bg-dark/95 backdrop-blur-xl border-b border-white/10">
+                <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-lg">
                     <div className="px-6 py-4 space-y-4">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 to={link.path}
-                                className="block text-base font-medium text-gray-300 hover:text-primary"
+                                className="block text-base font-medium text-text-dim hover:text-primary"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {link.name}

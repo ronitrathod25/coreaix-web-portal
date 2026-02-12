@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #2D7FF9;
-  --color-bg-dark: #020617;
-  --color-bg-alt: #0B1120;
-  --color-text-main: #E0E0E0;
-  --color-text-dim: #8A8A8A;
+  --color-primary: #3B82F6;
+  /* Blue 500 - Trustworthy, Clinical AI Blue */
+  --color-bg-dark: #F0F7FF;
+  /* Very Light Blue - Fresh, Clinical Background */
+  --color-bg-alt: #E0F2FE;
+  /* Light Sky Blue - Secondary Background */
+  --color-text-main: #0B1120;
+  /* Deep Blue-Black - High Contrast Text */
+  --color-text-dim: #475569;
+  /* Slate 600 - Secondary Text */
+  --color-border: #BFDBFE;
+  /* Blue 200 - Soft Blue Borders */
 
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -27,11 +34,11 @@
 
   @keyframes glow {
     from {
-      box-shadow: 0 0 5px #2D7FF9;
+      box-shadow: 0 0 5px #3B82F6;
     }
 
     to {
-      box-shadow: 0 0 20px #2D7FF9, 0 0 10px #2D7FF9;
+      box-shadow: 0 0 20px #3B82F6, 0 0 10px #3B82F6;
     }
   }
 }
@@ -42,6 +49,7 @@ html {
 
 body {
   background-color: var(--color-bg-dark);
+  background-image: radial-gradient(circle at 50% 0%, #E0F2FE 0%, #F0F7FF 100%);
   color: var(--color-text-main);
   font-family: var(--font-body);
 }

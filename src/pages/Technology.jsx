@@ -8,8 +8,8 @@ const Technology = () => {
         <div className="pt-20">
             <Section id="architecture" className="bg-bg-dark">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">The Dual-Tier Logic Engine.</h1>
-                    <p className="text-gray-400 max-w-2xl mx-auto">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 text-text-main">The Dual-Tier Logic Engine.</h1>
+                    <p className="text-text-dim max-w-2xl mx-auto">
                         A hybrid architecture combining edge computing for real-time biofeedback and cloud AI for clinical-grade analysis.
                     </p>
                 </div>
@@ -18,80 +18,80 @@ const Technology = () => {
                 <div className="max-w-4xl mx-auto mb-20">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center text-center relative">
                         {/* Step 1 */}
-                        <div className="p-6 border border-white/10 rounded-lg bg-white/5 relative z-10">
+                        <div className="p-6 border border-slate-200 rounded-lg bg-white shadow-sm relative z-10 transition-shadow hover:shadow-md">
                             <Activity className="mx-auto text-primary mb-2" size={32} />
-                            <h3 className="font-bold">Sensors</h3>
-                            <p className="text-xs text-gray-500 mt-1">PPG + ECG</p>
+                            <h3 className="font-bold text-text-main">Sensors</h3>
+                            <p className="text-xs text-text-dim mt-1">PPG + ECG</p>
 
                             {/* Connector */}
-                            <div className="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 text-gray-500 justify-center w-8">
+                            <div className="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 text-text-dim justify-center w-8">
                                 <ArrowRight size={20} />
                             </div>
-                            <div className="md:hidden flex justify-center text-gray-500 my-2">
+                            <div className="md:hidden flex justify-center text-text-dim my-2">
                                 <ArrowDown size={20} />
                             </div>
                         </div>
 
                         {/* Step 2 */}
-                        <div className="p-6 border border-white/10 rounded-lg bg-white/5 relative z-10">
+                        <div className="p-6 border border-slate-200 rounded-lg bg-white shadow-sm relative z-10 transition-shadow hover:shadow-md">
                             <Cpu className="mx-auto text-primary mb-2" size={32} />
-                            <h3 className="font-bold">Edge Compute</h3>
-                            <p className="text-xs text-gray-500 mt-1">ESP32-C3</p>
+                            <h3 className="font-bold text-text-main">Edge Compute</h3>
+                            <p className="text-xs text-text-dim mt-1">ESP32-C3</p>
 
-                            <div className="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 text-gray-500 justify-center w-8">
+                            <div className="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 text-text-dim justify-center w-8">
                                 <ArrowRight size={20} />
                             </div>
-                            <div className="md:hidden flex justify-center text-gray-500 my-2">
+                            <div className="md:hidden flex justify-center text-text-dim my-2">
                                 <ArrowDown size={20} />
                             </div>
                         </div>
 
                         {/* Step 3 */}
-                        <div className="p-6 border border-white/10 rounded-lg bg-white/5 relative z-10">
+                        <div className="p-6 border border-slate-200 rounded-lg bg-white shadow-sm relative z-10 transition-shadow hover:shadow-md">
                             <Server className="mx-auto text-primary mb-2" size={32} />
-                            <h3 className="font-bold">Cloud AI</h3>
-                            <p className="text-xs text-gray-500 mt-1">Deep Learning</p>
+                            <h3 className="font-bold text-text-main">Cloud AI</h3>
+                            <p className="text-xs text-text-dim mt-1">Deep Learning</p>
 
-                            <div className="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 text-gray-500 justify-center w-8">
+                            <div className="hidden md:flex absolute -right-8 top-1/2 -translate-y-1/2 text-text-dim justify-center w-8">
                                 <ArrowRight size={20} />
                             </div>
-                            <div className="md:hidden flex justify-center text-gray-500 my-2">
+                            <div className="md:hidden flex justify-center text-text-dim my-2">
                                 <ArrowDown size={20} />
                             </div>
                         </div>
 
                         {/* Step 4 */}
-                        <div className="p-6 border border-white/10 rounded-lg bg-white/5 z-10">
+                        <div className="p-6 border border-slate-200 rounded-lg bg-white shadow-sm z-10 transition-shadow hover:shadow-md">
                             <Smartphone className="mx-auto text-primary mb-2" size={32} />
-                            <h3 className="font-bold">App</h3>
-                            <p className="text-xs text-gray-500 mt-1">User Interface</p>
+                            <h3 className="font-bold text-text-main">App</h3>
+                            <p className="text-xs text-text-dim mt-1">User Interface</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="bg-white/5 p-8 rounded-xl border border-white/10">
-                        <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+                        <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-text-main">
                             <Activity className="text-primary" /> The Watchdog
                         </h3>
-                        <p className="text-gray-400 mb-6">
+                        <p className="text-text-dim mb-6">
                             Continuous HRV monitoring via wearable-compatible hardware. Detects stress precursors in real-time without user intervention.
                         </p>
-                        <ul className="space-y-2 text-sm text-gray-500">
+                        <ul className="space-y-2 text-sm text-text-dim">
                             <li>• 24/7 Background monitoring</li>
                             <li>• Anomaly detection</li>
                             <li>• Battery efficient</li>
                         </ul>
                     </div>
 
-                    <div className="bg-white/5 p-8 rounded-xl border border-white/10">
-                        <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
+                        <h3 className="text-2xl font-bold mb-4 flex items-center gap-3 text-text-main">
                             <Brain className="text-primary" /> The Clinical Engine
                         </h3>
-                        <p className="text-gray-400 mb-6">
+                        <p className="text-text-dim mb-6">
                             EEG-verified MDD detection with 96.69% accuracy. Acted upon when anomalies are flagged by the Watchdog.
                         </p>
-                        <ul className="space-y-2 text-sm text-gray-500">
+                        <ul className="space-y-2 text-sm text-text-dim">
                             <li>• 16-channel EEG analysis</li>
                             <li>• Clinical-grade precision</li>
                             <li>• Doctor-verified reports</li>
@@ -101,7 +101,7 @@ const Technology = () => {
             </Section>
 
             <Section id="hardware" className="bg-bg-alt">
-                <h2 className="text-3xl font-bold mb-12 text-center">Hardware Specifications</h2>
+                <h2 className="text-3xl font-bold mb-12 text-center text-text-main">Hardware Specifications</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
                         { icon: Activity, title: "Sensors", desc: "MAX86176 (PPG + ECG), ADPD4100 optical" },
@@ -111,10 +111,10 @@ const Technology = () => {
                         { icon: Zap, title: "Power", desc: "Low-power optimized for day-long usage" },
                         { icon: Brain, title: "Biofeedback", desc: "Haptic + auditory neuro-regulation loop" }
                     ].map((item, i) => (
-                        <Card key={i} className="hover:bg-white/10" delay={i * 0.1}>
+                        <Card key={i} className="hover:bg-white hover:shadow-md transition-all duration-300" delay={i * 0.1}>
                             <item.icon className="text-primary mb-4" size={28} />
-                            <h4 className="font-bold text-lg mb-2">{item.title}</h4>
-                            <p className="text-sm text-gray-400">{item.desc}</p>
+                            <h4 className="font-bold text-lg mb-2 text-text-main">{item.title}</h4>
+                            <p className="text-sm text-text-dim">{item.desc}</p>
                         </Card>
                     ))}
                 </div>

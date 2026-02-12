@@ -10,7 +10,7 @@ const Card = ({ children, className, delay = 0, ...props }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay }}
             className={cn(
-                "bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:border-primary/30 transition-colors duration-300",
+                "bg-white border border-slate-200 p-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300",
                 className
             )}
             {...props}
