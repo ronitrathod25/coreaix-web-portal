@@ -10,7 +10,7 @@ const Technology = () => {
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 text-text-main">The Dual-Tier Logic Engine.</h1>
                     <p className="text-text-dim max-w-2xl mx-auto">
-                        A hybrid architecture combining edge computing for real-time biofeedback and cloud AI for clinical-grade analysis.
+                        A hybrid architecture combining Edge Neural Processing and Clinical Cloud AI.
                     </p>
                 </div>
 
@@ -104,12 +104,12 @@ const Technology = () => {
                 <h2 className="text-3xl font-bold mb-12 text-center text-text-main">Hardware Specifications</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {[
-                        { icon: Activity, title: "Sensors", desc: "MAX86176 (PPG + ECG), ADPD4100 optical" },
-                        { icon: Cpu, title: "Processing", desc: "ESP32-C3 edge-optimized inference" },
-                        { icon: Wifi, title: "Connectivity", desc: "BLE 5.0 + Wi-Fi for seamless data sync" },
-                        { icon: Database, title: "Storage", desc: "Local buffering + Encrypted cloud sync" },
-                        { icon: Zap, title: "Power", desc: "Low-power optimized for day-long usage" },
-                        { icon: Brain, title: "Biofeedback", desc: "Haptic + auditory neuro-regulation loop" }
+                        { icon: Activity, title: "Multi-Modal Fusion", desc: "Synced Hemodynamic (PPG) and Bio-potential (EEG) signal acquisition." },
+                        { icon: Cpu, title: "Edge Neural Engine", desc: "On-device temporal processing with sub-200ms latency." },
+                        { icon: Wifi, title: "Secure Telemetry", desc: "End-to-End encrypted pipeline (DPDP & HIPAA Compliant)." },
+                        { icon: Database, title: "Adaptive Sampling", desc: "Dynamic frequency adjustment based on signal noise floor." },
+                        { icon: Zap, title: "Power Architecture", desc: "Ultra-low quiescent current design for 24/7 background monitoring." },
+                        { icon: Brain, title: "Haptic Neuro-Loop", desc: "Closed-loop biofeedback triggering tactile intervention cues." }
                     ].map((item, i) => (
                         <Card key={i} className="hover:bg-white hover:shadow-md transition-all duration-300" delay={i * 0.1}>
                             <item.icon className="text-primary mb-4" size={28} />
