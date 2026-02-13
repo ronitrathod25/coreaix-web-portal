@@ -27,7 +27,7 @@ const About = () => {
         {
             name: "Ronit Rathod",
             role: "Co-Founder & CEO",
-            image: "src/assets/ronit.jpeg", // Placeholder
+            image: "./src/assets/ronit.jpeg", // Placeholder
             quote: "Building the brain of AI.",
             badges: ["National Finalist HST’25 (IIT Mandi)", "Ventra Guard AI — Grant Winner"],
             socials: { linkedin: "https://www.linkedin.com/in/ronitrathod/" }
@@ -35,7 +35,7 @@ const About = () => {
         {
             name: "Manan Tarsariya",
             role: "Co-Founder & COO",
-            image: "src/assets/manan.jpeg", // Placeholder
+            image: "./src/assets/manan.jpeg", // Placeholder
             quote: "Engineering the hardware.",
             badges: ["Smart India Hackathon (Hardware) Finalist", "NASA Space Apps Nominee"],
             socials: { linkedin: "https://www.linkedin.com/in/manantarsariya/" }
@@ -284,3 +284,4 @@ const ContactForm = () => {
         </>
     );
 };
+
