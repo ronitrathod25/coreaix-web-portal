@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
@@ -9,6 +9,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+    const navRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,6 +19,17 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (isOpen && navRef.current && !navRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, [isOpen]);
+
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'Technology', path: '/technology' },
@@ -26,7 +38,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={cn(
+        <nav ref={navRef} className={cn(
             "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
             scrolled || isOpen ? "bg-white/80 backdrop-blur-md border-slate-200 shadow-sm" : "bg-transparent"
         )}>

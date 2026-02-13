@@ -76,7 +76,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-text-dim">
-                    <p>&copy; {new Date().getFullYear()} CoreAIx Labs LLP. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} <b>CoreAIx Labs LLP.</b> All rights reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <Link to="/privacy" className="hover:text-text-main transition-colors">Privacy Policy</Link>
                         <Link to="/terms" className="hover:text-text-main transition-colors">Terms of Service</Link>

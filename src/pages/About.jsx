@@ -59,7 +59,7 @@ const About = () => {
 
                             <div className="flex flex-col md:flex-row gap-6 mb-6">
                                 {/* Profile Image */}
-                                <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-lg overflow-hidden border-2 border-slate-100 shadow-sm">
+                                <div className="w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-lg overflow-hidden border-2 border-slate-100 shadow-sm mx-auto md:mx-0">
                                     <img
                                         src={person.image}
                                         alt={person.name}

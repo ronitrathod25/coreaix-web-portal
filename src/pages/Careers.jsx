@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Cpu, Rocket, ArrowRight, ExternalLink } from 'lucide-react';
+import { Brain, Cpu, Rocket, ArrowRight, ArrowUpRight } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -29,19 +29,19 @@ const Careers = () => {
             title: "Deep Learning Research Intern",
             type: "Internship",
             desc: "Experience with PyTorch/TensorFlow. Passion for EEG/Signal Processing.",
-            link: "https://forms.google.com" // Placeholder
+            link: "https://docs.google.com/forms/d/e/1FAIpQLSfUTl1KxOmtUJKmIskmFxzQ6jRQofd_mJzy7eAmP6YEictwTQ/viewform?usp=publish-editor"
         },
         {
             title: "Embedded Systems Intern",
             type: "Internship",
             desc: "ESP32/ARM architecture. C++ and RTOS experience required.",
-            link: "https://forms.google.com" // Placeholder
+            link: "https://docs.google.com/forms/d/e/1FAIpQLSfUTl1KxOmtUJKmIskmFxzQ6jRQofd_mJzy7eAmP6YEictwTQ/viewform?usp=publish-editor"
         },
         {
             title: "Founding Engineer (Full Stack)",
             type: "Full-Time",
             desc: "React/Node.js master. Capable of building scalable medical dashboards.",
-            link: "https://forms.google.com" // Placeholder
+            link: "https://docs.google.com/forms/d/e/1FAIpQLSfUTl1KxOmtUJKmIskmFxzQ6jRQofd_mJzy7eAmP6YEictwTQ/viewform?usp=publish-editor"
         }
     ];
 
@@ -103,46 +103,45 @@ const Careers = () => {
             {/* Open Positions */}
             <Section id="positions" className="bg-bg-dark">
                 <h2 className="text-3xl font-bold mb-12 text-center text-text-main">Open Positions</h2>
-                <div className="grid grid-cols-1 max-w-3xl mx-auto gap-6">
-                    {positions.map((job, i) => (
-                        <motion.a
-                            key={i}
-                            href={job.link}
+                <div className="space-y-4 max-w-3xl mx-auto">
+                    {positions.map((pos, index) => (
+                        <a
+                            key={index}
+                            href={pos.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: i * 0.1 }}
-                            className="block group"
+                            className="block group" // 'block' makes the whole anchor clickable
                         >
-                            <div className="bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md hover:border-primary/50 transition-all duration-300 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                                <div>
-                                    <div className="flex items-center gap-3 mb-1">
-                                        <h3 className="text-xl font-bold text-text-main group-hover:text-primary transition-colors">
-                                            {job.title}
-                                        </h3>
-                                        <span className="bg-blue-50 text-primary text-xs px-2 py-1 rounded font-medium border border-blue-100">
-                                            {job.type}
+                            <Card className="flex flex-row justify-between items-center p-6 hover:border-primary/50 transition-all cursor-pointer hover:shadow-lg bg-white gap-4">
+                                <div className="flex-1 min-w-0">
+                                    <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-2">
+                                        <h3 className="text-xl font-bold text-text-main leading-tight">{pos.title}</h3>
+                                        <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold border border-blue-100 whitespace-nowrap">
+                                            {pos.type}
                                         </span>
                                     </div>
-                                    <p className="text-text-dim text-sm">{job.desc}</p>
+                                    <p className="text-text-dim text-sm">{pos.desc}</p>
                                 </div>
-                                <ArrowRight className="text-text-dim group-hover:text-primary transition-colors" />
-                            </div>
-                        </motion.a>
+
+                                {/* Arrow Icon that moves on hover */}
+                                <div className="text-text-dim group-hover:text-primary group-hover:translate-x-2 transition-all duration-300 shrink-0">
+                                    <ArrowRight size={24} />
+                                </div>
+                            </Card>
+                        </a>
                     ))}
                 </div>
 
-                <div className="flex justify-center mt-12">
-                    <Button
-                        onClick={() => window.open('https://forms.google.com', '_blank')}
-                        className="px-8 py-4 text-lg"
-                    >
-                        Apply for the Mission <ExternalLink size={20} className="ml-2" />
-                    </Button>
+                {/* The Main CTA at the bottom */}
+                <div className="mt-12 flex justify-center">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUTl1KxOmtUJKmIskmFxzQ6jRQofd_mJzy7eAmP6YEictwTQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+                        <Button className="w-full sm:w-auto px-8 py-4 text-lg shadow-blue-500/25 shadow-xl hover:shadow-2xl transition-all">
+                            Apply for the Mission <ArrowUpRight className="ml-2" size={20} />
+                        </Button>
+                    </a>
                 </div>
             </Section>
-        </div>
+        </div >
     );
 };
 
